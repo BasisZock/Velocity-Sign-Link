@@ -1,0 +1,24 @@
+name: Velocity_Sign_Link
+version: "1.0"
+main: BasisZock.github.io.velocitySignLink.Main
+api-version: "1.21"
+description: "A plugin to link signs with Velocity, sending players to other servers."
+
+permissions:
+  VeloSign.bypass.cooldown:
+    description: "Allows the player to bypass the sign cooldown."
+    default: op
+
+commands:
+  getsign:
+    description: "Retrieve data (the target server) from the sign you are looking at."
+    usage: /getsign
+    aliases: [ds]
+  savesign:
+    description: "Save a sign's data (the target server) by looking at the sign."
+    usage: /savesign <serverName>
+    aliases: [ssgn]
+  signcooldown:
+    description: "Set the global cooldown (in milliseconds) for sign usage."
+    usage: /signcooldown <milliseconds>
+    aliases: [scd]
