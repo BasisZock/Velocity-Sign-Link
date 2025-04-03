@@ -1,6 +1,6 @@
 # Velocity Sign Link
 
-A lightweight Bukkit/Spigot plugin for Velocity that allows players to use signs to connect to other servers.
+A lightweight Paper/Spigot plugin for Velocity that allows players to use signs to connect to other servers.
 
 ## Features
 
