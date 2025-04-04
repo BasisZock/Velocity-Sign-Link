@@ -34,16 +34,19 @@ public final class Main extends JavaPlugin {
 
         // Create a default config file if it doesn't exist
         File configFile = new File("plugins/VelocitySignLink/config.yml");
-        try (FileWriter writer = new FileWriter(configFile)) {
-            writer.write("# config.yml\n\n");
-            writer.write("# Default cooldown time in milliseconds\n");
-            writer.write("cooldown: 1000 # 1 second\n");
-            getLogger().info("Config file created successfully!");
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (!configFile.exists()) {
+            // Make sure the parent directories exist
+            configFile.getParentFile().mkdirs();
+            try (FileWriter writer = new FileWriter(configFile)) {
+                writer.write("# config.yml\n\n");
+                writer.write("# Default cooldown time in milliseconds\n");
+                writer.write("cooldown: 1000 # 1 second\n");
+                getLogger().info("Config file created successfully!");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
-
     @Override
     public void onDisable() {
         // Plugin shutdown logic (if needed)
