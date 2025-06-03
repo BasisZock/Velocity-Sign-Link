@@ -41,7 +41,7 @@ public class GetSignCommand implements CommandExecutor {
         String text = DatabaseManager.getSignTextByCoordinates(x, y, z, world);
         if (text != null) {
             player.sendMessage(ChatColor.AQUA + "Sign Data: " + ChatColor.WHITE + text);
-        } else {
+        } else if (!player.hasPermission("VeloSign.noMessage")) {
             player.sendMessage(ChatColor.YELLOW + "No data found for this sign.");
         }
         return true;
