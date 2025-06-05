@@ -91,5 +91,28 @@ public class DatabaseManager {
         }
         return result;
     }
+    public static Integer deleteSign(int x, int y, int z, String world) {
+        try {
+            String sql = "DELETE FROM signs WHERE x = ? AND y = ? AND z = ? AND world = ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, x);
+            ps.setInt(2, y);
+            ps.setInt(3, z);
+            ps.setString(4, world);
+            int rowsAffected = ps.executeUpdate();
+            ps.close();
+            if (rowsAffected > 0) {
+                return 2; // Return "2" if a row was deleted
+            }
+            else if (rowsAffected == 0) {
+                return 1; // Return "1" if no row was deleted
+            }
+            else {
+                return 0; // Return "0" if an error occurred
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
-

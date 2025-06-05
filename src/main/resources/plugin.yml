@@ -20,13 +20,16 @@ permissions:
   VeloSign.signcooldown:
     description: "Allows the player to change the cooldown duaration"
     default: op
+  VeloSign.deletesign:
+    description: "Allows the player to delete signs"
+    default: op
+
 commands:
   getsign:
     description: "Retrieve data (the target server) from the sign you are looking at."
     usage: /getsign
     aliases: [ds]
     permission: VeloSign.getsign
-
   savesign:
     description: "Save a sign's data (the target server) by looking at the sign."
     usage: /savesign <serverName>
@@ -37,3 +40,7 @@ commands:
     usage: /signcooldown <milliseconds>
     aliases: [scd]
     permission: VeloSign.signcooldown
+  deletesign:
+    description: "Delete a sign's data."
+    usage: /deletesign
+    permission: VeloSign.deletesign

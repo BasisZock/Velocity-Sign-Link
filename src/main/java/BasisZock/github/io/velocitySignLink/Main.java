@@ -1,5 +1,6 @@
 package BasisZock.github.io.velocitySignLink;
 
+import BasisZock.github.io.velocitySignLink.commands.DeleteSignCommand;
 import BasisZock.github.io.velocitySignLink.commands.GetSignCommand;
 import BasisZock.github.io.velocitySignLink.commands.SaveSignCommand;
 import BasisZock.github.io.velocitySignLink.commands.SignCooldownCommand;
@@ -25,6 +26,8 @@ public final class Main extends JavaPlugin {
         getCommand("savesign").setExecutor(new SaveSignCommand());
         getCommand("getsign").setExecutor(new GetSignCommand());
         getCommand("signcooldown").setExecutor(new SignCooldownCommand());
+        getCommand("deletesign").setExecutor(new DeleteSignCommand());
+
 
         // Register event listeners
         getServer().getPluginManager().registerEvents(new SignClickListener(this), this);
