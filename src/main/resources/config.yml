@@ -1,0 +1,3 @@
+# config.yml
+# Default cooldown time in milliseconds
+cooldown: 1000 # 1 second

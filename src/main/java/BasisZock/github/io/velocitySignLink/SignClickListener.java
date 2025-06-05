@@ -19,18 +19,15 @@ import java.util.Map;
 public class SignClickListener implements Listener {
     private final Plugin plugin;
     private final Map<String, Long> cooldowns = new HashMap<>();
-    private long cooldownTime; // in milliseconds
+    private final long cooldownTime; // in milliseconds
 
     public SignClickListener(Plugin plugin) {
         this.plugin = plugin;
-        loadConfig();
+        this.cooldownTime = plugin.getConfig().getLong("cooldown"); // Load cooldown time from config
     }
 
-    // Loads the cooldown value from the configuration file
-    private void loadConfig() {
-        FileConfiguration config = plugin.getConfig();
-        cooldownTime = config.getLong("cooldown", 1000);
-    }
+
+
 
     // Sends the player to the specified server via BungeeCord
     public void sendPlayerToServer(Player player, String serverName) {
