@@ -78,7 +78,9 @@ public class SignClickListener implements Listener {
             sendPlayerToServer(player, text);
             cooldowns.put(playerName, currentTime);
         } else {
-            player.sendMessage(ChatColor.YELLOW + "No data found for this sign.");
+            if(!player.hasPermission("VeloSign.noMessage")) {
+                player.sendMessage(ChatColor.YELLOW + "No data found for this sign.");
+            }
         }
     }
 }

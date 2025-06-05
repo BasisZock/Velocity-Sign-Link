@@ -7,6 +7,7 @@ description: "A plugin to link signs with Velocity, sending players to other ser
 permissions:
   VeloSign.nomessage:
     description: "Does not send warning messages to the Player who has this permission."
+    default: true
   VeloSign.bypass.cooldown:
     description: "Allows the player to bypass the sign cooldown."
     default: op
