@@ -71,7 +71,7 @@ To build from source:
 
 ## Contributing
 
-Contributions are welcome! Feel free to fork the project and submit pull requests. For major changes, please open an issue first to discuss your ideas.
+Contributions are welcome! Feel free to fork the project and submit pull requests. For suggestions, please open an issue first to discuss your ideas.
 
 ## License
 
