@@ -1,3 +1,4 @@
 # config.yml
 # Default cooldown time in milliseconds
 cooldown: 1000 # 1 second
+display_below_one_second_as_one: true #If the cooldown is less then 1 seconds, for example 0.6 or 0.2 seconds, it displays 1 second instead of 0.
