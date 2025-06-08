@@ -59,6 +59,10 @@ public class SignClickListener implements Listener {
             long lastUse = cooldowns.get(playerName);
             if (currentTime - lastUse < cooldownTime) {
                 long remaining = (cooldownTime - (currentTime - lastUse)) / 1000;
+                if (remaining < 1) { // Return 1 if below one for simplicity
+                    player.sendMessage(ChatColor.RED + "Please wait 1 more second before using this sign.");
+                    return;
+                }
                 player.sendMessage(ChatColor.RED + "Please wait " + remaining + " more second(s) before using this sign.");
                 return;
             }
