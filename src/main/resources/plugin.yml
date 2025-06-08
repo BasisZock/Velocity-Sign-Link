@@ -1,5 +1,5 @@
 name: VelocitySignLink
-version: "1.0"
+version: "1.3"
 main: BasisZock.github.io.velocitySignLink.Main
 api-version: "1.21"
 description: "A plugin to link signs with Velocity, sending players to other servers."
